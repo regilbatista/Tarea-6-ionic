@@ -1,0 +1,9 @@
+.img{
+    width: 100vw; /* Ancho del 100% de la ventana */
+    height: 100vh; /* Alto del 100% de la ventana */
+    object-fit: cover; /* Escalar y recortar la imagen para ajustarse a las dimensiones */
+    position: fixed; /* Fijar la imagen en la ventana para que no se desplace con el contenido */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Colocar la imagen detrás del contenido */
+}

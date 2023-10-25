@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>edad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-button 
+        (click)="getAge()"
+        expand="block" fill="outline" color="warning" >Calcular</ion-button>
+  
+   
+        <ion-card *ngIf="userData.length > 0">
+          <img [src]="userData[0].imageUrl" />
+          <ion-card-header>
+            <ion-card-title>Resultado</ion-card-title>
+            <ion-card-subtitle>{{ userData[0].message }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Edad: {{ userData[0].age }}
+          </ion-card-content>
+        </ion-card>
+</ion-content>

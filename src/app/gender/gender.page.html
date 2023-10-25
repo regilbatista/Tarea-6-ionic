@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>gender</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-button 
+        (click)="sendRequest()"
+        expand="block" fill="outline" color="warning" >Calcular</ion-button>
+  
+   <ion-card class="center-card" [ngClass]="colorClass">
+    <ion-card-header>
+      <ion-card-title>{{ result }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
